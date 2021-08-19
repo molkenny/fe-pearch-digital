@@ -48,7 +48,8 @@ export default {
       return out;
     },
     guardarDatosEnBD(click = false){
-      this.$http.put(`spreadsheet/${this.id_spreadsheet}`, { data: JSON.stringify(this.document.getData()) } , { headers: { 'Authorization': 'Bearer '+ this.$store.getters.getToken } })
+      if(this.id_spreadsheet){
+        this.$http.put(`spreadsheet/${this.id_spreadsheet}`, { data: JSON.stringify(this.document.getData()) } , { headers: { 'Authorization': 'Bearer '+ this.$store.getters.getToken } })
         .then(response => {
             if (response.body && response.body.success) {
               if(click){
@@ -67,6 +68,7 @@ export default {
             let error = response.body.err.message || 'Al conectar con el servidor';
             console.log(error);
         });
+      }
     },
     async getUserSpreadSheet(){
       try {
