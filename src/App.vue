@@ -1,26 +1,45 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="App" class="app-container">
+    <NavBar v-if="isNotInLogIn() && isNotError() && isNotForbidden()"></NavBar>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from './views/components/NavBar.vue';
 
 export default {
   name: 'App',
+  data(){
+    return{
+    }
+  },
   components: {
-    HelloWorld
+    NavBar
+  },
+  beforeMount(){
+    this.$store.dispatch('setCurrentLocation');
+  },
+  methods: {
+    isNotInLogIn() {
+      return this.$router.history.current["name"] != "login";
+    },
+    isNotError() {
+      return this.$router.history.current["name"] != "error";
+    },
+    isNotForbidden() {
+      return this.$router.history.current["name"] != "forbidden";
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import './assets/css/custom.css';
+  body {
+    background-color: #d7d7d7 !important;
+  }
+  .app-container {
+      min-width: 411px !important;
+  }
 </style>

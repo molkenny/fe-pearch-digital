@@ -1,0 +1,33 @@
+  /* Tablas */
+  
+  .table-panel-title {
+      line-height: 30.8px;
+      font-size: 18px;
+      font-weight: bold;
+  }
+  
+  .swal-title {
+      font-size: large !important;
+  }
+  /* Forms */
+  
+  .errorLabel {
+      color: red;
+      padding-left: 25px;
+  }
+  /*General*/
+  
+  .pointer {
+      cursor: pointer;
+  }
+  
+  .font-alert {
+      font-family: 'Russo One', sans-serif;
+      font-size: 1.3em;
+  }
+  
+  @media (max-width: 576px) {
+      .mb-sm-2 {
+          margin-bottom: 0.75rem !important;
+      }
+  }
