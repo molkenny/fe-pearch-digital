@@ -15,8 +15,9 @@
 
 <h4>Home</h4>
 <p>
-    Aqui se podran crear los spreadsheet por usuario (editar y borrarlos) Nota: tiene funciones muy basicas (solo escritura de celdas), los cambios se guardan en la BD cada 10 segundos o se pueden cambiar con el boton guardar Mejoras: Hay que revisar la libreria
-    de spreadsheet para ver como poder renderear nuevamente los stilos de las celdas, textos, merge, etc
+    Aqui se podran crear los spreadsheet por usuario (editar y borrarlos) , los cambios se guardan en la BD cada 10 segundos o se pueden cambiar con el boton guardar
+    Ademas al seleccionar una celda se puede importar datos del tiempo y pegarlos en la misma con el boton "importar datos tiempo"
+    Nota: La api de tiempo trae muchos datos, de los cuales habria que ver cuales son significativos para poder ponerlos en el "importar"
 </p>
 
 <hr>
@@ -24,6 +25,7 @@
 <h4>Wheather</h4>
 <p>
     Aqui se encuentra el pronostico extendido para los proximos 15 dias
+    Nota: La api de tiempo trae muchos datos, de los cuales habria que ver cuales son significativos para poder ponerlos en la vista
 </p>
 
 

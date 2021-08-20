@@ -76,7 +76,6 @@ export const store = new Vuex.Store({
             }, () => {
                 state.error = 'Geolocation is not available.';
             });
-
         }
     },
     plugins: [createPersistedState()]

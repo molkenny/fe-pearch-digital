@@ -85,8 +85,8 @@ export default {
   },
   async beforeMount(){
     this.location = this.getLocation;
-      await this.getWeather();
-      this.loading = false;
+    await this.getWeather();
+    this.loading = false;
   }
 }
 </script>
